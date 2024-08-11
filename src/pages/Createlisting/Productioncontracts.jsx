@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/PagesStyles/Productioncontracts.css'
 function Productioncontracts() {
   return (
-    <><div className="w-[80vw]">
+    <><div className="">
     <div className="pageheader"><h1>New Production Contract</h1></div>
     <div className="unique-form-container ">
             <h2 className="unique-form-title">General</h2>
