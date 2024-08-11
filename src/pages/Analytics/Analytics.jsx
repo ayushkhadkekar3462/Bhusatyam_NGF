@@ -1,5 +1,5 @@
-const Analytics = () => {
+const Negotiationitems = () => {
   return <div className="title"> Analytics</div>;
 };
 
-export default Analytics;
+export default Negotiationitems;

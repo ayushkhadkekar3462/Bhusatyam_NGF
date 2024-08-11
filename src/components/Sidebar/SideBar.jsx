@@ -12,49 +12,83 @@ import "../../styles/sidebar.css";
 const routes = [
   {
     path: "/",
-    name: "Dashboard",
+    name: "DASHBOARD",
     icon: <FaHome className="size-8 text-black"/>,
   },
   {
-    path: "/users",
-    name: "Users",
+    path: "",
+    name: "MARKETPLACE",
     icon: <FaUser className="size-8 text-black"/>,
-  },
-  {
-    path: "/messages",
-    name: "Messages",
-    icon: <MdMessage className="size-8 text-black"/>,
-  },
-  {
-    path: "/analytics",
-    name: "Analytics",
-    icon: <BiAnalyse className="size-8 text-black"/>,
-  },
-  {
-    path: "/file-manager",
-    name: "File Manager",
-    icon: <AiTwotoneFileExclamation className="size-8 text-black"/>,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/Product",
+        name: "PRODUCTS ",
         icon: <FaUser className="size-8 text-black"/>,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/Productioncontracts",
+        name: "PRODUCTION CONTRACTS",
         icon: <FaLock className="size-8 text-black"/>,
       },
       {
-        path: "/settings/billing",
-        name: "Billing",
+        path: "/Productbid",
+        name: "PRODUCT BID",
         icon: <FaMoneyBill className="size-8 text-black"/>,
       },
     ],
   },
   {
-    path: "/order",
-    name: "Order",
+    path: "/Createlisting",
+    name: "CREATELISTING",
+    icon: <MdMessage className="size-8 text-black"/>,
+    subRoutes: [
+      {
+        path: "/Products",
+        name: "PRODUCTS ",
+        icon: <FaUser className="size-8 text-black"/>,
+      },
+      {
+        path: "/Productioncontracts",
+        name: "PRODUCTION CONTRACTS",
+        icon: <FaLock className="size-8 text-black"/>,
+      },
+      {
+        path: "/Productbids",
+        name: "PRODUCT BID",
+        icon: <FaMoneyBill className="size-8 text-black"/>,
+      },
+    ],
+  },
+  {
+    path: "/Negotiationitems",
+    name: "NEGOTIAION ITEMS",
+    icon: <BiAnalyse className="size-8 text-black"/>,
+  },
+  {
+    path: "",
+    name: "COMPLETED ORDERS", 
+    icon: <AiTwotoneFileExclamation className="size-8 text-black"/>,
+    subRoutes: [
+      {
+        path: "/CProducts",
+        name: "PRODUCTS ",
+        icon: <FaUser className="size-8 text-black"/>,
+      },
+      {
+        path: "/CProductioncontracts",
+        name: "PRODUCTION CONTRACTS",
+        icon: <FaLock className="size-8 text-black"/>,
+      },
+      {
+        path: "/CProductbids",
+        name: "PRODUCT BID",
+        icon: <FaMoneyBill className="size-8 text-black"/>,
+      },
+    ],
+  },
+  {
+    path: "/Support",
+    name: "SUPPORT",
     icon: <BsCartCheck className="size-8 text-black"/>,
   },
   {
