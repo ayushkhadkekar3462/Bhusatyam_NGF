@@ -10,7 +10,7 @@ const Productbid = () => {
   return (
     <>
     <div className="marketplace-container">
-      <div className="header">Marketplace</div>
+      <div className="header">Bid Requests</div>
       <div className="filters">
         <div className="filter-group">
           <select className="filter-input">

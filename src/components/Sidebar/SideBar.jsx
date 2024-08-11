@@ -26,7 +26,7 @@ const routes = [
         icon: <FaUser className="size-8 text-black"/>,
       },
       {
-        path: "/Productioncontracts",
+        path: "/Productioncontract",
         name: "PRODUCTION CONTRACTS",
         icon: <FaLock className="size-8 text-black"/>,
       },

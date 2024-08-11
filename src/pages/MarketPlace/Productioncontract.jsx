@@ -12,7 +12,7 @@ const Productioncontract = () => {
   return (
     <>
     <div className="marketplace-container">
-      <div className="header">Marketplace</div>
+      <div className="header">Production Contract</div>
       <div className="filters">
         <div className="filter-group">
           <select className="filter-input">
