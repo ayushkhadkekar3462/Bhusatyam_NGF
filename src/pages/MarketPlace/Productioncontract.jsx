@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Productioncontracts() {
+function Productioncontract() {
   return (
     <div>
       this is production contracts
@@ -8,4 +8,4 @@ function Productioncontracts() {
   )
 }
 
-export default Productioncontracts
+export default Productioncontract
