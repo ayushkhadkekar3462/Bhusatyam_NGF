@@ -2,14 +2,14 @@ import "./App.css";
 import SideBar from "./components/Sidebar/SideBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
-import Users from "./pages/Users";
-import Messages from "./pages/Messages";
-import FileManager from "./pages/FileManager";
-import Analytics from "./pages/Analytics";
-import Order from "./pages/Order";
-import Saved from "./pages/Saved";
-import Setting from "./pages/Setting";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Users from "./pages/Users/Users";
+import Messages from "./pages/Messages/Messages";
+import FileManager from "./pages/FileManager/FileManager";
+import Analytics from "./pages/Analytics/Analytics";
+import Order from "./pages/Order/Order";
+import Saved from "./pages/Saved/Saved";
+import Setting from "./pages/Setting/Setting";
 function App() {
   return (
     <Router>
