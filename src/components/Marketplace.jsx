@@ -1,18 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import '../../styles/Marketplace.css'; // Add CSS for detailed styling
-import Map from '../../components/Map';
+import '../styles/Marketplace.css'; // Add CSS for detailed styling
 
-const Productioncontracts = () => {
+const Marketplace = () => {
   const [locationType, setLocationType] = useState('Location');
   const [miles, setMiles] = useState(50);
 
-<<<<<<< HEAD:src/pages/MarketPlace/Productioncontracts.jsx
-=======
-function Productioncontract() {
->>>>>>> 40907137708da467e7f4f41f89240952802f32b3:src/pages/MarketPlace/Productioncontract.jsx
   return (
-    <>
     <div className="marketplace-container">
       <div className="header">Marketplace</div>
       <div className="filters">
@@ -66,15 +60,8 @@ function Productioncontract() {
           <button className="list-button">List</button>
         </div>
       </div>
-      
     </div>
-    <Map/>
-    </>
   );
 };
 
-<<<<<<< HEAD:src/pages/MarketPlace/Productioncontracts.jsx
-export default Productioncontracts;
-=======
-export default Productioncontract
->>>>>>> 40907137708da467e7f4f41f89240952802f32b3:src/pages/MarketPlace/Productioncontract.jsx
+export default Marketplace;
