@@ -1,14 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import '../../styles/Marketplace.css'; // Add CSS for detailed styling
-import Map from '../../components/Map';
+import '../styles/Marketplace.css'; // Add CSS for detailed styling
 
-const Product = () => {
+const Marketplace = () => {
   const [locationType, setLocationType] = useState('Location');
   const [miles, setMiles] = useState(50);
 
   return (
-    <>
     <div className="marketplace-container">
       <div className="header">Marketplace</div>
       <div className="filters">
@@ -62,11 +60,8 @@ const Product = () => {
           <button className="list-button">List</button>
         </div>
       </div>
-      
     </div>
-    <Map/>
-    </>
   );
 };
 
-export default Product;
+export default Marketplace;

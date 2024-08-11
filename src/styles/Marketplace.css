@@ -1,0 +1,173 @@
+/* Marketplace.css */
+.marketplace-container {
+    padding: 5px;
+    background-color: #f8f8f8;
+    width:min(1200px,80vw);
+  }
+  
+  .header {
+    font-size: 27px;
+    color: #fff;
+    background-color: #333;
+    padding: 25px;
+    text-align: left;
+    border-radius: 10px;
+  }
+  
+  .filters {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .filter-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 250px;
+  }
+  .filter-input option{
+    background-color: #b635da;
+  }
+  .filter-input option:checked {
+    background-color: #38b16d; /* Green color from the image */
+    color: #fff;
+  }
+  
+  .clear-button {
+    background-color: #c0e1a6;
+    border: none;
+    padding: 10px 15px;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .location-search {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .location-tabs {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .tab-active {
+    background-color: #7bd10f;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tab-inactive {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .location-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .miles-range {
+    margin-top: 20px;
+  }
+  
+  .miles-input {
+    width: 60px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    
+  }
+  
+  .search-button {
+    background-color: #00aaff;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .clear-button {
+    background-color: #ffaa00;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .map-button {
+    background-color: #7bd10f;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .list-button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 15px;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .filter-group {
+      flex-direction: column;
+    }
+  
+    .location-search {
+      padding: 15px;
+    }
+  
+    .location-tabs {
+      flex-direction: column;
+    }
+  
+    .action-buttons, .view-options {
+      flex-direction: column;
+    }
+  }
+  
