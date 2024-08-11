@@ -7,6 +7,10 @@ const Productioncontracts = () => {
   const [locationType, setLocationType] = useState('Location');
   const [miles, setMiles] = useState(50);
 
+<<<<<<< HEAD:src/pages/MarketPlace/Productioncontracts.jsx
+=======
+function Productioncontract() {
+>>>>>>> 40907137708da467e7f4f41f89240952802f32b3:src/pages/MarketPlace/Productioncontract.jsx
   return (
     <>
     <div className="marketplace-container">
@@ -69,4 +73,8 @@ const Productioncontracts = () => {
   );
 };
 
+<<<<<<< HEAD:src/pages/MarketPlace/Productioncontracts.jsx
 export default Productioncontracts;
+=======
+export default Productioncontract
+>>>>>>> 40907137708da467e7f4f41f89240952802f32b3:src/pages/MarketPlace/Productioncontract.jsx

@@ -10,7 +10,7 @@ import Setting from "./pages/Setting/Setting";
 import MarketPlace from "./pages/MarketPlace/MarketPlace";
 import Negotiationitems from "./pages/Analytics/Analytics";
 import Product from "./pages/MarketPlace/Product";
-import Productioncontract from "./pages/MarketPlace/Productioncontracts";
+import Productioncontract from "./pages/MarketPlace/Productioncontract";
 import Productbid from "./pages/MarketPlace/Productbid";
 import Productbids from "./pages/Createlisting/Productbids";
 import Productioncontracts from "./pages/Createlisting/Productioncontracts";
