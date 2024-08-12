@@ -1,8 +1,18 @@
-# React + Vite
+#Bhusatyam technology 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+step-1 : copy the https link of the repository.
 
-Currently, two official plugins are available:
+step-2 : Then go to any folder in desktop and open VSCode in that folder 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+step-3 : open the terminal by command "ctrl + ` " or from the top click on terminal and open it .
+
+step-4 : then write : git clone <copied link> . ( here don't use <> , just simply paste the link)
+
+step-5 : if this command does not work then download git bash from the chrome and Re-run this .
+
+step-6 : now go in same folder and run this in terminal : npm i
+
+step-7 : then run : npm run dev 
+
+step-8 : open the local host or click on the link with 'ctrl'
+

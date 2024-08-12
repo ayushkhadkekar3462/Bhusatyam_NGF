@@ -3,7 +3,7 @@ import '../../styles/PagesStyles/Productioncontracts.css'
 function Productioncontracts() {
   return (
     <><div className="">
-    <div className="pageheader"><h1>New Production Contract</h1></div>
+    <div className="pageheader w-[90vw]"><h1>New Production Contract</h1></div>
     <div className="unique-form-container ">
             <h2 className="unique-form-title">General</h2>
             <form className="unique-form">
