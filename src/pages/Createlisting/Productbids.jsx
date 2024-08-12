@@ -6,7 +6,7 @@ function Productbids() {
   return (
   <>
 
-<div className="pageheader"><h1>New Product Bid</h1></div>
+<div className="pageheader w-[90vw]"><h1>New Product Bid</h1></div>
     
 
 <div className="form-container1">

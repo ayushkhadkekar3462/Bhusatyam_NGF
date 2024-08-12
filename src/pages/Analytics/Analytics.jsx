@@ -18,8 +18,8 @@ const Negotiationitems = () => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-98.35, 39.50], // Centered on the US
-      zoom: 4
+      center: [78.96, 20.59] ,// Centered on the US
+      zoom: 3 
     });
 
     // Fetch rainfall data from OpenWeatherMap
