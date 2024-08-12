@@ -13,111 +13,111 @@ const routes = [
   {
     path: "/",
     name: "DASHBOARD",
-    icon: <FaHome className="size-8 text-black"/>,
+    icon: <FaHome className="size-5 text-black"/>,
   },
   {
     path: "",
     name: "MARKETPLACE",
-    icon: <FaUser className="size-8 text-black"/>,
+    icon: <FaUser className="size-5 text-black"/>,
     subRoutes: [
       {
         path: "/Product",
         name: "PRODUCTS ",
-        icon: <FaUser className="size-8 text-black"/>,
+        icon: <FaUser className="size-5 text-black"/>,
       },
       {
         path: "/Productioncontract",
         name: "PRODUCTION CONTRACTS",
-        icon: <FaLock className="size-8 text-black"/>,
+        icon: <FaLock className="size-5 text-black"/>,
       },
       {
         path: "/Productbid",
         name: "PRODUCT BID",
-        icon: <FaMoneyBill className="size-8 text-black"/>,
+        icon: <FaMoneyBill className="size-5 text-black"/>,
       },
     ],
   },
   {
     path: "/Createlisting",
     name: "CREATELISTING",
-    icon: <MdMessage className="size-8 text-black"/>,
+    icon: <MdMessage className="size-5 text-black"/>,
     subRoutes: [
       {
         path: "/Products",
         name: "PRODUCTS ",
-        icon: <FaUser className="size-8 text-black"/>,
+        icon: <FaUser className="size-5 text-black"/>,
       },
       {
         path: "/Productioncontracts",
         name: "PRODUCTION CONTRACTS",
-        icon: <FaLock className="size-8 text-black"/>,
+        icon: <FaLock className="size-5 text-black"/>,
       },
       {
         path: "/Productbids",
         name: "PRODUCT BID",
-        icon: <FaMoneyBill className="size-8 text-black"/>,
+        icon: <FaMoneyBill className="size-5 text-black"/>,
       },
     ],
   },
   {
     path: "/Negotiationitems",
     name: "NEGOTIAION ITEMS",
-    icon: <BiAnalyse className="size-8 text-black"/>,
+    icon: <BiAnalyse className="size-5 text-black"/>,
   },
   {
     path: "",
     name: "COMPLETED ORDERS", 
-    icon: <AiTwotoneFileExclamation className="size-8 text-black"/>,
+    icon: <AiTwotoneFileExclamation className="size-5 text-black"/>,
     subRoutes: [
       {
         path: "/CProducts",
         name: "PRODUCTS ",
-        icon: <FaUser className="size-8 text-black"/>,
+        icon: <FaUser className="size-5 text-black"/>,
       },
       {
         path: "/CProductioncontracts",
         name: "PRODUCTION CONTRACTS",
-        icon: <FaLock className="size-8 text-black"/>,
+        icon: <FaLock className="size-5 text-black"/>,
       },
       {
         path: "/CProductbids",
         name: "PRODUCT BID",
-        icon: <FaMoneyBill className="size-8 text-black"/>,
+        icon: <FaMoneyBill className="size-5 text-black"/>,
       },
     ],
   },
   {
     path: "/Support",
     name: "SUPPORT",
-    icon: <BsCartCheck className="size-8 text-black"/>,
+    icon: <BsCartCheck className="size-5 text-black"/>,
   },
   {
     path: "/settings",
     name: "Settings",
-    icon: <BiCog className="size-8 text-black"/>,
+    icon: <BiCog className="size-5 text-black"/>,
     exact: true,
     subRoutes: [
       {
         path: "/settings/profile",
         name: "Profile ",
-        icon: <FaUser className="size-8 text-black"/>,
+        icon: <FaUser className="size-5 text-black"/>,
       },
       {
         path: "/settings/2fa",
         name: "2FA",
-        icon: <FaLock className="size-8 text-black"/>,
+        icon: <FaLock className="size-5 text-black"/>,
       },
       {
         path: "/settings/billing",
         name: "Billing",
-        icon: <FaMoneyBill className="size-8 text-black"/>,
+        icon: <FaMoneyBill className="size-5 text-black"/>,
       },
     ],
   },
   {
     path: "/saved",
     name: "Saved",
-    icon: <AiFillHeart className="size-8 text-black"/>,
+    icon: <AiFillHeart className="size-5 text-black"/>,
   },
 ];
 
@@ -190,7 +190,7 @@ const SideBar = ({ children }) => {
             </AnimatePresence>
 
             <div className="bars flex justify-center align-middle hover:cursor-pointer">
-              <FaBars className="size-6"/>
+              <FaBars className="size-6" color="white"/>
             </div>
           </div>
           {/* <div className="search">

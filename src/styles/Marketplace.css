@@ -2,8 +2,9 @@
 .marketplace-container {
     padding: 5px;
     background-color: #f8f8f8;
-    width:min(1200px,80vw);
+    width:min(1400px,90vw);
   }
+  
   
   .header {
     font-size: 27px;
