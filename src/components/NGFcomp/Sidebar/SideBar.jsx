@@ -152,8 +152,8 @@ const SideBar = ({ children }) => {
       opacity: 1,
       transition: {
         duration: 2,
-      },
-    },
+    },
+  },
 
   };
 
