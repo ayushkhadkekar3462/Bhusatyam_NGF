@@ -1,18 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
-import '../../styles/Marketplace.css'; // Add CSS for detailed styling
-import Map from '../../components/Map';
+import '../../styles/NGFpagestyle/pagestyle/Marketplace.css';
 
-const Productioncontract = () => {
+const Marketplace = () => {
   const [locationType, setLocationType] = useState('Location');
   const [miles, setMiles] = useState(50);
 
-
-
   return (
-    <>
     <div className="marketplace-container">
-      <div className="header">Production Contract</div>
+      <div className="header">Marketplace</div>
       <div className="filters">
         <div className="filter-group">
           <select className="filter-input">
@@ -64,13 +60,8 @@ const Productioncontract = () => {
           <button className="list-button">List</button>
         </div>
       </div>
-      
     </div>
-    <Map/>
-    </>
   );
 };
 
-
-export default Productioncontract
-
+export default Marketplace;

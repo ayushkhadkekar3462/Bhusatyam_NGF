@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
-import '../styles/Marketplace.css'; // Add CSS for detailed styling
+import '../../../styles/NGFpagestyle/pagestyle/Marketplace.css'; 
+import Map from '../../../components/NGFcomp/Map.jsx';
 
-const Marketplace = () => {
+const Product = () => {
   const [locationType, setLocationType] = useState('Location');
   const [miles, setMiles] = useState(50);
 
   return (
+    <>
     <div className="marketplace-container">
       <div className="header">Marketplace</div>
       <div className="filters">
@@ -60,8 +62,11 @@ const Marketplace = () => {
           <button className="list-button">List</button>
         </div>
       </div>
+      
     </div>
+    <Map/>
+    </>
   );
 };
 
-export default Marketplace;
+export default Product;

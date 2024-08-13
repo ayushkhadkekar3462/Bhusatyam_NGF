@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/PagesStyles/Productbids.css'
+import '../../../styles/NGFpagestyle/pagestyle/Productbids.css'
 
 
 function Productbids() {

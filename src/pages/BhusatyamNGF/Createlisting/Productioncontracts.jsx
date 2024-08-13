@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/PagesStyles/Productioncontracts.css'
+import '../../../styles/NGFpagestyle/pagestyle/Productioncontracts.css';
 function Productioncontracts() {
   return (
     <><div className="">

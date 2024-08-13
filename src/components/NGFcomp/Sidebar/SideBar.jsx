@@ -8,7 +8,7 @@ import { BsCartCheck } from "react-icons/bs";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
-import "../../styles/sidebar.css";
+import "../../../styles/NGFpagestyle/compstyles/sidebar.css";
 const routes = [
   {
     path: "/",

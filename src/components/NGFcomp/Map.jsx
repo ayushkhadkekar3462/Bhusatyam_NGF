@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import * as parkDate from "../data/skateboard-parks.json";
-import "../styles/Map.css";
+import * as parkDate from "../../data/skateboard-parks.json";
+import "../../styles/NGFpagestyle/compstyles/Map.css";
 
 // Ensure Mapbox access token is set
 mapboxgl.accessToken = "pk.eyJ1IjoiYXl1c2hraGFka2VrYXIiLCJhIjoiY2x6ZWY0dzR2MG9zcTJxcXE5dWQ4czA5ZSJ9.4VTm_Sy8KPMq6lY9-jatJA";
