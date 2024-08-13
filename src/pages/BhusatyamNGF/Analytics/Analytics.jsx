@@ -1,62 +1,76 @@
-// MapComponent.js
-
 import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
-import axios from 'axios';
+import * as ee from '@google/earthengine';
 
-// Set your Mapbox and OpenWeatherMap API keys here
-const MAPBOX_TOKEN = 'pk.eyJ1IjoiYXl1c2hraGFka2VrYXIiLCJhIjoiY2x6ZWY0dzR2MG9zcTJxcXE5dWQ4czA5ZSJ9.4VTm_Sy8KPMq6lY9-jatJA';
-const OPENWEATHERMAP_API_KEY = '0fe0a7fb13a36fc0839054397d62449b';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXl1c2hraGFka2VrYXIiLCJhIjoiY2x6ZWY0dzR2MG9zcTJxcXE5dWQ4czA5ZSJ9.4VTm_Sy8KPMq6lY9-jatJA'; // Replace with your Mapbox token
 
-mapboxgl.accessToken = MAPBOX_TOKEN;
-
-const Negotiationitems = () => {
+const RainfallMap = () => {
   const mapContainerRef = useRef(null);
+  const mapRef = useRef(null);
 
   useEffect(() => {
-    // Initialize map
-    const map = new mapboxgl.Map({
+    // Initialize the map
+    mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [78.96, 20.59] ,// Centered on the US
-      zoom: 3 
+      style: 'mapbox://styles/mapbox/satellite-streets-v11',
+      center: [-90.7, 26.12],
+      zoom: 2,
     });
 
-    // Fetch rainfall data from OpenWeatherMap
-    const fetchRainfallData = async () => {
-      try {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
-          params: {
-            q: 'Indore',
-             // Replace with desired city
-            appid: OPENWEATHERMAP_API_KEY,
-            units: 'metric' // or 'imperial'
-          }
-        });
+    // Authenticate and initialize Earth Engine
+    const authenticate = () => {
+      ee.data.authenticateViaOauth({
+        clientId: '927999826353-015qu1f1v6tf3a0gvd2rhf8dd4bkvf8l.apps.googleusercontent.com', // Replace with your OAuth client ID
+        scope: ['https://www.googleapis.com/auth/earthengine.readonly'],
+        onSuccess: () => {
+          ee.initialize(null, null, () => {
+            console.log('Earth Engine authenticated and initialized');
 
-        const { coord } = response.data;
+            // Load the dataset after authentication
+            const dataset = ee.ImageCollection('JAXA/GPM_L3/GSMaP/v6/operational')
+              .filter(ee.Filter.date('2023-01-01', '2023-01-02')); // Adjust to a date with data
+            const precipitation = dataset.select('hourlyPrecipRate').mean(); // Average over the period
 
-        // Add a marker for the rainfall data location
-        new mapboxgl.Marker()
-          .setLngLat([coord.lon, coord.lat])
-          .setPopup(new mapboxgl.Popup().setHTML(`<h3>Rainfall Data</h3><p>${response.data.weather[0].description}</p>`))
-          .addTo(map);
+            // Define visualization parameters
+            const precipitationVis = {
+              min: 0.0,
+              max: 10.0,
+              palette: [
+                'd0e1f9', 'a0c2f7', '80a3f0', '6080e0', '4060d0', '2040b0'
+              ],
+            };
 
-        // Add custom layer or overlay here if you have more specific rainfall data
-        // For example, you could use Mapbox's data sources and layers to show rainfall intensity
+            // Get the map layer URL from Earth Engine
+            precipitation.getMap(precipitationVis, (mapLayer) => {
+              mapRef.current.addSource('precipitation-source', {
+                type: 'raster',
+                tiles: [mapLayer.urlTemplate],
+                tileSize: 256,
+              });
 
-      } catch (error) {
-        console.error('Error fetching rainfall data:', error);
-      }
+              mapRef.current.addLayer({
+                id: 'precipitation-layer',
+                type: 'raster',
+                source: 'precipitation-source',
+                paint: {
+                  'raster-opacity': 0.7,
+                },
+              });
+            });
+          });
+        },
+        onFailure: (error) => {
+          console.error('Earth Engine authentication failed:', error);
+        },
+      });
     };
 
-    fetchRainfallData();
+    mapRef.current.on('load', authenticate);
 
-    // Clean up on unmount
-    return () => map.remove();
+    return () => mapRef.current.remove();
   }, []);
 
-  return <div ref={mapContainerRef} style={{ width: '100%', height: '500px' }} />;
+  return <div ref={mapContainerRef} style={{ width: '100%', height: '100vh' }} />;
 };
 
-export default Negotiationitems;
+export default RainfallMap;

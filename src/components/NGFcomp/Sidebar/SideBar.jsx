@@ -143,19 +143,18 @@ const SideBar = ({ children }) => {
 
   const showAnimation = {
     hidden: {
-      width: 0,
       opacity: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     show: {
       opacity: 1,
-      width: "auto",
       transition: {
-        duration: 0.5,
-      },
-    },
+        duration: 2,
+      },
+    },
+
   };
 
   return (
